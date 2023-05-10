@@ -1,7 +1,13 @@
 import React from 'react'
-import { AppBar, Toolbar, Box, Typography, Button } from '@mui/material'
+import { AppBar, Toolbar, Box, Typography, Button, IconButton } from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
+
+  const dropDown = () => {
+
+  }
+
   return (
     <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
       <AppBar position='static' color='transparent' elevation={0} sx={{ borderBottom: '1px solid lightgrey', width: '90%'}}>
