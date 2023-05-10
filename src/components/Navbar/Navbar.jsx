@@ -8,33 +8,46 @@ const Navbar = () => {
 
   const theme = useTheme();
 
+  const DropDown = () => (
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      <Button color='inherit'>Product</Button>
+      <Button color='inherit'>Templates</Button>
+      <Button color='inherit'>Pricing</Button>
+      <Button color='inherit'>Reviews</Button>
+      <Button sx={{ borderRadius: '20px' }} color='inherit'>Log in</Button>
+    </Box>
+  )
+
   return (
     <>
         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
-        <AppBar position='static' color='transparent' elevation={0} sx={{ borderBottom: '1px solid lightgrey', width: '90%'}}>
-            <Toolbar>
-                <Typography variant='h6' sx={{ flexGrow: 1 }}>
-                    bonsai
-                </Typography>
-                <Box sx={{ display: 'flex', [theme.breakpoints.down('md')]: {display: 'none'} }}>
-                    <Box mr={10}>
-                        <Button color='inherit'>Product</Button>
-                        <Button color='inherit'>Templates</Button>
-                        <Button color='inherit'>Pricing</Button>
-                        <Button color='inherit'>Reviews</Button>
+            <AppBar position='static' color='transparent' elevation={0} sx={{ borderBottom: '1px solid lightgrey', width: '90%'}}>
+                <Toolbar>
+                    <Typography variant='h6' sx={{ flexGrow: 1 }}>
+                        bonsai
+                    </Typography>
+                    
+                    <Box sx={{display: 'flex'}}>
+                        <Box sx={{ [theme.breakpoints.down('md')]: {display: 'none'} }} mr={10}>
+                            <Button color='inherit'>Product</Button>
+                            <Button color='inherit'>Templates</Button>
+                            <Button color='inherit'>Pricing</Button>
+                            <Button color='inherit'>Reviews</Button>
+                        </Box>
+                        <Button sx={{ mr: 2, borderRadius: '20px', [theme.breakpoints.down('md')]: {display: 'none'} }} color='inherit'>Log in</Button>
+                        <Button sx={{ borderRadius: '20px' }} variant='contained' color='primary'>Start free</Button>
                     </Box>
-                    <Button sx={{ mr: 2, borderRadius: '20px' }} color='inherit'>Log in</Button>
-                    <Button sx={{ borderRadius: '20px' }} variant='contained' color='primary'>Start free</Button>
-                </Box>
-                <IconButton onClick={() => setDropActive(!dropActive)} sx={{[theme.breakpoints.up('md')]: {display: 'none'},
-                color: 'white',
-                backgroundColor: 'black', 
-                ':hover': {backgroundColor: 'darkgrey'}}}>
-                    <MenuIcon/>
-                </IconButton>
-            </Toolbar>
-        </AppBar>
+
+                    <IconButton onClick={() => setDropActive(!dropActive)} sx={{ml: 2, [theme.breakpoints.up('md')]: {display: 'none'},
+                    color: 'white',
+                    backgroundColor: 'black', 
+                    ':hover': {backgroundColor: 'darkgrey'}}}>
+                        <MenuIcon/>
+                    </IconButton>
+                </Toolbar>
+            </AppBar>
         </Box>
+        {dropActive && <DropDown />}
     </>
   )
 }
