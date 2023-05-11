@@ -9,8 +9,8 @@ const Price = ({ name, price, description, features, slider }) => {
         <Typography variant='h6'>$ {price} {slider? '/year' : '/month'}</Typography>
         <Button sx={{ textTransform: 'unset', borderRadius: '20px', backgroundColor: '#22ad01', ':hover': {backgroundColor: '#22af01'} }} size='large' variant='contained'>Start for free</Button>
         <Typography variant='body2'>{description}<br />{slider && 'Billed annually.'}</Typography>
-        <Divider />
         <List>
+        <Divider variant='middle'/>
             {features.map(item => (
                 <ListItem key={item}>
                     <ListItemIcon>
