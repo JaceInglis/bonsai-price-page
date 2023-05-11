@@ -35,7 +35,7 @@ const Navbar = () => {
                             <Button color='inherit'>Reviews</Button>
                         </Box>
                         <Button sx={{ mr: 2, borderRadius: '20px', [theme.breakpoints.down('md')]: {display: 'none'} }} color='inherit'>Log in</Button>
-                        <Button sx={{ borderRadius: '20px' }} variant='contained' color='primary'>Start free</Button>
+                        <Button sx={{ borderRadius: '20px', backgroundColor: 'green', ':hover': {backgroundColor: 'darkgrey'} }} variant='contained'>Start free</Button>
                     </Box>
 
                     <IconButton onClick={() => setDropActive(!dropActive)} sx={{ml: 2, [theme.breakpoints.up('md')]: {display: 'none'},
