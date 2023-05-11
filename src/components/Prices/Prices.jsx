@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Price from './Price/Price'
 
 const prices = [
     {name: 'Standard', priceMonth: 24, priceYear: 17, description: 'Ideal for freelancers and contractors just starting out. Billed annually.', features: ['Standard workflow']},
@@ -7,8 +8,13 @@ const prices = [
 ]
 
 const Prices = () => {
+
+  const [slider, setSlider] = useState(false);
+
   return (
-    <div>Prices</div>
+    prices.map(price => (
+        <Price name={price.name} price={slider? price.priceYear : price.priceMonth} description={price.description} features={price.features} />
+    ))
   )
 }
 
