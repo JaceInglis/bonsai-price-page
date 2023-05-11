@@ -4,10 +4,10 @@ import CheckIcon from '@mui/icons-material/Check';
 
 const Price = ({ name, price, description, features, slider }) => {
   return (
-    <Paper sx={{ display: 'flex', flexDirection: 'column'}}>
-        <Typography variant='h6'>{name}</Typography>
+    <Paper sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
+        <Typography variant='h4'>{name}</Typography>
         <Typography variant='h6'>$ {price} {slider? '/year' : '/month'}</Typography>
-        <Button sx={{ textTransform: 'unset', width: '20%', borderRadius: '20px', backgroundColor: '#22ad01', ':hover': {backgroundColor: '#22af01'} }} size='large' variant='contained'>Start for free</Button>
+        <Button sx={{ textTransform: 'unset', borderRadius: '20px', backgroundColor: '#22ad01', ':hover': {backgroundColor: '#22af01'} }} size='large' variant='contained'>Start for free</Button>
         <Typography variant='body2'>{description}<br />{slider && 'Billed annually.'}</Typography>
         <Divider />
         <List>
