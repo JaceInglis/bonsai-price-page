@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Toolbar, Box, Typography, Button, IconButton } from '@mui/material'
+import { AppBar, Toolbar, Box, Typography, Button, IconButton, Paper } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import { useTheme } from "@mui/material/styles";
 
@@ -9,13 +9,13 @@ const Navbar = () => {
   const theme = useTheme();
 
   const DropDown = () => (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+    <Paper elevation={12} sx={{ mt: .5, display: 'flex', flexDirection: 'column' }}>
       <Button color='inherit'>Product</Button>
       <Button color='inherit'>Templates</Button>
       <Button color='inherit'>Pricing</Button>
       <Button color='inherit'>Reviews</Button>
-      <Button sx={{ borderRadius: '20px' }} color='inherit'>Log in</Button>
-    </Box>
+      <Button color='inherit'>Log in</Button>
+    </Paper>
   )
 
   return (
@@ -26,7 +26,7 @@ const Navbar = () => {
                     <Typography variant='h6' sx={{ flexGrow: 1 }}>
                         bonsai
                     </Typography>
-                    
+
                     <Box sx={{display: 'flex'}}>
                         <Box sx={{ [theme.breakpoints.down('md')]: {display: 'none'} }} mr={10}>
                             <Button color='inherit'>Product</Button>
