@@ -10,8 +10,9 @@ const Prices = () => {
 
   return (
     <Box sx={{ mt: '5%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-        <Typography variant='h3' sx={{ textAlign: 'center', width: '50%'}}>Pick the best plan for your business</Typography>
-        <Box sx={{display: 'flex'}}>
+        <Typography variant='h3' sx={{ textAlign: 'center', width: '50%', mb: '5%'}}>Pick the best plan for your business</Typography>
+        <Slider />
+        <Box sx={{display: 'flex', mt: '5%'}}>
             {prices.map(price => (
                 <Price key={price.name} name={price.name} price={slider? price.priceYear : price.priceMonth} description={price.description} features={price.features} slider={slider}/>
             ))}
