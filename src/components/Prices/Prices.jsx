@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Box, Typography } from '@mui/material';
 import Price from './Price/Price';
 import { prices } from './priceObj';
+import Slider from './Slider/Slider';
 
 const Prices = () => {
 
