@@ -6,7 +6,7 @@ const Price = ({ name, price, description, features, slider }) => {
   return (
     <Paper sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
         <Typography variant='h4'>{name}</Typography>
-        <Typography variant='h6'>$ {price} {slider? '/year' : '/month'}</Typography>
+        <Typography variant='h6'>$ <strong>{price}</strong> /month</Typography>
         <Button sx={{ textTransform: 'unset', borderRadius: '20px', backgroundColor: '#22ad01', ':hover': {backgroundColor: '#22af01'} }} size='large' variant='contained'>Start for free</Button>
         <Typography variant='body2'>{description}<br />{slider && 'Billed annually.'}</Typography>
         <List>
