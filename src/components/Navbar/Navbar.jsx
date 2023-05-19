@@ -21,20 +21,20 @@ const Navbar = () => {
   return (
     <>
         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
-            <AppBar position='static' color='transparent' elevation={0} sx={{ borderBottom: '1px solid lightgrey', width: '90%'}}>
+            <AppBar position='static' color='transparent' elevation={0} sx={{ borderBottom: '1px solid lightgrey', width: '90%' }}>
                 <Toolbar>
-                    <Typography variant='h6' sx={{ flexGrow: 1 }}>
+                    <Typography variant='h6' sx={{ flexGrow: 1, color: '#003c2f' }}>
                         bonsai
                     </Typography>
 
                     <Box sx={{display: 'flex'}}>
-                        <Box sx={{ [theme.breakpoints.down('md')]: {display: 'none'} }} mr={10}>
+                        <Box sx={{ [theme.breakpoints.down('md')]: {display: 'none'}, color: '#738c7a' }} mr={10}>
                             <Button color='inherit'>Product</Button>
                             <Button color='inherit'>Templates</Button>
                             <Button color='inherit'>Pricing</Button>
                             <Button color='inherit'>Reviews</Button>
                         </Box>
-                        <Button sx={{ mr: 2, borderRadius: '20px', [theme.breakpoints.down('md')]: {display: 'none'} }} color='inherit'>Log in</Button>
+                        <Button sx={{ mr: 2, borderRadius: '20px', [theme.breakpoints.down('md')]: {display: 'none'}, color: '#003c2f' }} >Log in</Button>
                         <Button sx={{ borderRadius: '20px', backgroundColor: '#22ad01', ':hover': {backgroundColor: '#22af01'} }} variant='contained'>Start free</Button>
                     </Box>
 
