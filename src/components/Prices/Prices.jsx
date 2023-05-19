@@ -13,7 +13,7 @@ const Prices = () => {
 
   return (
     <Box sx={{ mt: '5%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-        <Typography variant='h3' sx={{ textAlign: 'center', width: '50%', mb: '5%'}}>Pick the best plan for your business</Typography>
+        <Typography variant='h2' sx={{ textAlign: 'center', width: '50%', mb: '5%', color: '#003c2f', fontWeight: '700'}}>Pick the best plan for your business</Typography>
         <Slider handleToggle={handleToggle} slider={slider}/>
         <Box sx={{display: 'flex', mt: '5%'}}>
             {prices.map(price => (
